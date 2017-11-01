@@ -1,0 +1,426 @@
+#N canvas 174 49 990 686 10;
+#X obj 156 403 bng 15 250 50 0 empty empty oneshot 17 7 0 10 -262144
+-1 -1;
+#X obj 156 374 hradio 15 1 0 4 empty empty stop/play/reverse/pingpong
+0 -8 0 10 -262144 -1 -1 1;
+#X obj 156 434 s controls;
+#X obj 15 34 r controls;
+#X obj 15 60 seq64-countv;
+#N canvas 557 320 752 501 (subpatch) 0;
+#X obj 325 -87 r final-seq;
+#X obj 325 -65 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 325 -37 spigot;
+#X obj 358 -58 tgl 15 0 empty \$0-preson empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X floatatom 97 4 5 0 0 0 - - #0-count;
+#X msg 136 -49 3;
+#X msg 163 -66 set \$1;
+#X obj 136 -187 list length;
+#X msg 136 -162 0 \$1;
+#X obj 136 -137 route 0;
+#X floatatom 136 -113 5 0 0 0 - - -;
+#X obj 136 -93 t b f;
+#X obj -215 -187 unpack f f f f f f f f f f f f f f f f;
+#X floatatom -215 -160 2 0 0 0 - - -;
+#X floatatom -200 -160 2 0 0 0 - - -;
+#X floatatom -185 -160 2 0 0 0 - - -;
+#X floatatom -170 -160 2 0 0 0 - - -;
+#X floatatom -155 -160 2 0 0 0 - - -;
+#X floatatom -140 -160 2 0 0 0 - - -;
+#X floatatom -125 -160 2 0 0 0 - - -;
+#X floatatom -110 -160 2 0 0 0 - - -;
+#X obj -215 -216 sel 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16;
+#X obj -215 -239 r \$0-count;
+#X obj -215 -115 s pres-read;
+#X msg 58 -204 1 2 3 4;
+#X obj 137 -204 inlet;
+#X floatatom -95 -159 2 0 0 0 - - -;
+#X floatatom -80 -159 2 0 0 0 - - -;
+#X floatatom -65 -159 2 0 0 0 - - -;
+#X floatatom -50 -159 2 0 0 0 - - -;
+#X floatatom -35 -159 2 0 0 0 - - -;
+#X floatatom -20 -159 2 0 0 0 - - -;
+#X floatatom -5 -159 2 0 0 0 - - -;
+#X floatatom 10 -159 2 0 0 0 - - -;
+#X msg 261 -37 min 1;
+#X obj 261 -59 loadbang;
+#X obj 97 -20 counter;
+#X obj 217 -35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 217 -58 reset;
+#X msg -183 41 ms \$1;
+#X obj -183 108 s \$0-to-counter;
+#X obj -223 -32 unpack f f f f f f f f f f f f f f f f;
+#X floatatom -223 -5 2 0 0 0 - - -;
+#X floatatom -208 -5 2 0 0 0 - - -;
+#X floatatom -193 -5 2 0 0 0 - - -;
+#X floatatom -178 -5 2 0 0 0 - - -;
+#X floatatom -163 -5 2 0 0 0 - - -;
+#X floatatom -148 -5 2 0 0 0 - - -;
+#X floatatom -133 -5 2 0 0 0 - - -;
+#X floatatom -118 -5 2 0 0 0 - - -;
+#X obj -223 -61 sel 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16;
+#X obj -223 -84 r \$0-count;
+#X floatatom -103 -4 2 0 0 0 - - -;
+#X floatatom -88 -4 2 0 0 0 - - -;
+#X floatatom -73 -4 2 0 0 0 - - -;
+#X floatatom -58 -4 2 0 0 0 - - -;
+#X floatatom -43 -4 2 0 0 0 - - -;
+#X floatatom -28 -4 2 0 0 0 - - -;
+#X floatatom -13 -4 2 0 0 0 - - -;
+#X floatatom 2 -4 2 0 0 0 - - -;
+#X obj 73 -78 inlet;
+#X obj -183 84 spigot;
+#X obj -150 67 tgl 15 0 empty \$0-timepres empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 102 52 tgl 15 0 \$0-preson empty list-preset 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 102 73 tgl 15 0 \$0-timepres empty time 17 7 0 10 -262144 -1
+-1 0 1;
+#X floatatom 102 92 5 0 0 0 - - -;
+#X obj 216 75 r velocidad;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 36 0;
+#X connect 3 0 2 1;
+#X connect 5 0 36 4;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 5 0;
+#X connect 11 1 6 0;
+#X connect 12 0 13 0;
+#X connect 12 1 14 0;
+#X connect 12 2 15 0;
+#X connect 12 3 16 0;
+#X connect 12 4 17 0;
+#X connect 12 5 18 0;
+#X connect 12 6 19 0;
+#X connect 12 7 20 0;
+#X connect 12 8 26 0;
+#X connect 12 9 27 0;
+#X connect 12 10 28 0;
+#X connect 12 11 29 0;
+#X connect 12 12 30 0;
+#X connect 12 13 31 0;
+#X connect 12 14 32 0;
+#X connect 12 15 33 0;
+#X connect 13 0 23 0;
+#X connect 14 0 23 0;
+#X connect 15 0 23 0;
+#X connect 16 0 23 0;
+#X connect 17 0 23 0;
+#X connect 18 0 23 0;
+#X connect 19 0 23 0;
+#X connect 20 0 23 0;
+#X connect 21 0 13 0;
+#X connect 21 1 14 0;
+#X connect 21 2 15 0;
+#X connect 21 3 16 0;
+#X connect 21 4 17 0;
+#X connect 21 5 18 0;
+#X connect 21 6 19 0;
+#X connect 21 7 20 0;
+#X connect 21 8 26 0;
+#X connect 21 9 27 0;
+#X connect 21 10 28 0;
+#X connect 21 11 29 0;
+#X connect 21 12 30 0;
+#X connect 21 13 31 0;
+#X connect 21 14 32 0;
+#X connect 21 15 33 0;
+#X connect 22 0 21 0;
+#X connect 24 0 7 0;
+#X connect 24 0 12 0;
+#X connect 25 0 7 0;
+#X connect 25 0 12 0;
+#X connect 34 0 36 0;
+#X connect 35 0 34 0;
+#X connect 36 0 4 0;
+#X connect 37 0 36 3;
+#X connect 38 0 37 0;
+#X connect 39 0 61 0;
+#X connect 41 0 42 0;
+#X connect 41 1 43 0;
+#X connect 41 2 44 0;
+#X connect 41 3 45 0;
+#X connect 41 4 46 0;
+#X connect 41 5 47 0;
+#X connect 41 6 48 0;
+#X connect 41 7 49 0;
+#X connect 41 8 52 0;
+#X connect 41 9 53 0;
+#X connect 41 10 54 0;
+#X connect 41 11 55 0;
+#X connect 41 12 56 0;
+#X connect 41 13 57 0;
+#X connect 41 14 58 0;
+#X connect 41 15 59 0;
+#X connect 42 0 39 0;
+#X connect 43 0 39 0;
+#X connect 44 0 39 0;
+#X connect 45 0 39 0;
+#X connect 46 0 39 0;
+#X connect 47 0 39 0;
+#X connect 48 0 39 0;
+#X connect 49 0 39 0;
+#X connect 50 0 42 0;
+#X connect 50 1 43 0;
+#X connect 50 2 44 0;
+#X connect 50 3 45 0;
+#X connect 50 4 46 0;
+#X connect 50 5 47 0;
+#X connect 50 6 48 0;
+#X connect 50 7 49 0;
+#X connect 50 8 52 0;
+#X connect 50 9 53 0;
+#X connect 50 10 54 0;
+#X connect 50 11 55 0;
+#X connect 50 12 56 0;
+#X connect 50 13 57 0;
+#X connect 50 14 58 0;
+#X connect 50 15 59 0;
+#X connect 51 0 50 0;
+#X connect 52 0 39 0;
+#X connect 53 0 39 0;
+#X connect 54 0 39 0;
+#X connect 55 0 39 0;
+#X connect 56 0 39 0;
+#X connect 57 0 39 0;
+#X connect 58 0 39 0;
+#X connect 59 0 39 0;
+#X connect 60 0 41 0;
+#X connect 61 0 40 0;
+#X connect 62 0 61 1;
+#X connect 65 0 40 0;
+#X connect 66 0 65 0;
+#X coords 0 -1 1 1 85 60 1 100 50;
+#X restore 602 471 pd;
+#X msg 679 316 2 4;
+#X msg 679 359 1 3;
+#X msg 679 413 4 4 2 1 3 4;
+#X msg 680 337 1;
+#X obj 648 26 r \$0-to-counter;
+#X msg 602 440 125 40 250 1000 124 100;
+#X msg 678 388 1 2 3;
+#X msg 602 388 50 125 240;
+#N canvas 115 444 1075 610 com 0;
+#X msg 437 416 disconnect;
+#X floatatom 590 521 5 0 0 0 - - -;
+#X obj 530 422 t b a b;
+#X msg 576 449 [;
+#X msg 530 449 ];
+#X msg 373 210 /motor 14 \$1;
+#X obj 373 180 int;
+#X obj 219 188 int;
+#X obj 238 249 int;
+#X obj 102 259 int;
+#X obj 650 187 int;
+#X obj 513 182 int;
+#X obj 786 182 int;
+#X msg 219 212 /motor 4 \$1;
+#X msg 238 274 /motor 2 \$1;
+#X msg 102 282 /motor 5 \$1;
+#X msg 650 208 /motor 16 \$1;
+#X msg 513 210 /motor 12 \$1;
+#X msg 786 205 /motor 13 \$1;
+#X msg 63 416 connect 192.168.1.200 8266;
+#X msg 234 417 connect 192.168.1.201 8266;
+#X text 109 73 MOTOR 1;
+#X text 239 71 MOTOR 2;
+#X text 275 393 Light TESTER;
+#X text 40 393 CNTRL-Z / Controlador torre MUSEO;
+#X text 672 14 MOTOR DRIVER 2 - ESP output 16/14 - 12/13 ventiladores
+;
+#X text 69 9 MOTOR DRIVER 1 - ESP output 5/0 - 2/4 Goterotos;
+#X text 375 71 MOTOR 3;
+#X text 519 68 MOTOR 4;
+#X text 653 69 MOTOR 5;
+#X obj 809 315 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 803 405 /motor 0 \$1;
+#X obj 806 381 int;
+#X obj 86 169 hsl 128 10 0 1023 0 0 empty empty reverse-1 8 5 0 10
+-184055 -230876 -1 0 1;
+#X obj 83 196 int;
+#X text 790 82 MOTOR 7;
+#X text 815 293 TEST PIN 0 led;
+#X msg 83 221 /motor 15 \$1;
+#X obj 105 116 hsl 128 10 0 1023 0 0 empty v1 motor--1 8 5 0 10 -184055
+-230876 -1 0 1;
+#X obj 222 169 hsl 128 10 0 1023 0 0 empty empty reverse-2 8 5 0 10
+-184055 -230876 -1 0 1;
+#X obj 240 116 hsl 128 10 0 1023 0 0 empty v2 motor--2 8 5 0 10 -184055
+-230876 -1 5500 1;
+#X obj 376 116 hsl 128 10 0 1023 0 0 empty v3 motor--3 8 5 0 10 -117173
+-230876 -1 0 1;
+#X obj 653 116 hsl 128 10 0 1023 0 0 empty v5 motor--5 8 5 0 10 -117173
+-230876 -1 0 1;
+#X obj 516 116 hsl 128 10 0 1023 0 0 empty v4 motor--4 8 5 0 10 -117173
+-230876 -1 0 1;
+#X obj 789 116 hsl 128 10 0 1023 0 0 empty v7 motor--7 8 5 0 10 -117173
+-230876 -1 0 1;
+#X obj 386 136 bng 12 250 50 0 empty empty connect 17 7 0 10 -262144
+-1 -1;
+#X obj 459 136 tgl 12 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 513 136 bng 12 250 50 0 empty empty disconnect 17 7 0 10 -262144
+-1 -1;
+#X floatatom 373 272 5 0 0 0 - - -;
+#X obj 376 102 hsl 128 10 0 1023 0 0 pwmv3 empty set-pwm-motor3 8 5
+0 10 -117173 -230876 -1 7000 0;
+#X obj 653 102 hsl 128 10 0 1023 0 0 pwmv5 empty set-pwm-motor5 8 5
+0 10 -117173 -230876 -1 10500 0;
+#X obj 516 102 hsl 128 10 0 1023 0 0 pwmv4 empty set-pwm-motor4 8 5
+0 10 -117173 -230876 -1 3100 0;
+#X obj 789 102 hsl 128 10 0 1023 0 0 pwmv7 empty set-pwm-motor7 8 5
+0 10 -117173 -230876 -1 4300 0;
+#X obj 551 490 mrpeach/packOSC;
+#X obj 551 569 mrpeach/udpsend 8266;
+#X obj 105 102 hsl 128 10 0 1023 0 0 pwmv1 empty set-pwm-motor1 8 5
+0 10 -184055 -230876 -1 4400 1;
+#X obj 240 102 hsl 128 10 0 1023 0 0 pwmv2 empty set-pwm-motor2 8 5
+0 10 -184055 -230876 -1 5500 1;
+#X connect 0 0 54 0;
+#X connect 2 0 4 0;
+#X connect 2 1 53 0;
+#X connect 2 2 3 0;
+#X connect 3 0 53 0;
+#X connect 4 0 53 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
+#X connect 7 0 13 0;
+#X connect 8 0 14 0;
+#X connect 9 0 15 0;
+#X connect 10 0 16 0;
+#X connect 11 0 17 0;
+#X connect 12 0 18 0;
+#X connect 13 0 2 0;
+#X connect 14 0 2 0;
+#X connect 15 0 2 0;
+#X connect 16 0 2 0;
+#X connect 17 0 2 0;
+#X connect 18 0 2 0;
+#X connect 19 0 54 0;
+#X connect 20 0 54 0;
+#X connect 30 0 32 0;
+#X connect 31 0 2 0;
+#X connect 32 0 31 0;
+#X connect 33 0 34 0;
+#X connect 34 0 37 0;
+#X connect 37 0 2 0;
+#X connect 38 0 9 0;
+#X connect 39 0 7 0;
+#X connect 40 0 8 0;
+#X connect 41 0 6 0;
+#X connect 41 0 48 0;
+#X connect 42 0 10 0;
+#X connect 43 0 11 0;
+#X connect 44 0 12 0;
+#X connect 45 0 19 0;
+#X connect 47 0 0 0;
+#X connect 53 0 54 0;
+#X connect 53 1 1 0;
+#X connect 54 0 46 0;
+#X coords 0 -1 1 1 825 50 1 100 100;
+#X restore 22 553 pd com;
+#N canvas 811 78 501 580 explications 1;
+#X text 46 28 En el seq64-countv se puede definir donde empieza y donde
+acaba la secuencia con min y max. Se mueve el cuadrito negro y se define
+el cuadro que corresponde a la swecuencia.;
+#X text 47 111 El seq64x6 es un secuenciador \, se pone las cruces
+encima de los cuadritos para encender el motor. Los dos primeras lineas
+son la gota una ( en gota o en chorro) \, las dos siguientes por la
+gota dos. Se puede grabar unos presets con seleccionando el numero
+deseado ( sel) y con write se graba. Despues se puede usar el numero
+de presets para tocar el preset deseado. Hize un espacio de control
+donde hay la velocidad de la secuencia \, el stop/play/reverse/pingpong(
+ida y vuelta en loop) y un oneshot. Eso permite controlar directo el
+secuenciador. Mas abajo hay un objecto con un toggle list-prest \,
+uno time y un numero. Eso es para componer con varias secuencias y
+sus velocidades. Para usarlo hay que poner un mensaje a la dercha con
+el numero de preset que se desea usar en el orden deseado por ejemplo
+;
+#X msg 210 362 2 1 5 3 2 2 3 3 1 7;
+#X text 50 385 Eso hace que las secuencias pueden ser combinadas \,
+si desean cambiar la velocidad de las secuencias \, tambien se puede
+poniendo un mensaje con las velocidades a la izquierda del objecto.
+Tendrian que estar en el mismo orden que las del mensaje de secuencias.
+Todo eso esta activo desde el momento queel toggle esta activado (
+con la cruz adentro). Si se activa solo el list-preset la velocidad
+sera la misma para todas las secuencias \, igual se podra cambiar a
+mano. Cuando tendran secuencias de gotas definidas podremos tambien
+despues crear un automatismo. Eso es solo por las gotas \, por los
+ventiladores tenemos que ver algo juntos.;
+#X restore 773 302 pd explications;
+#X floatatom 73 372 5 0 0 2 velocidad - velocidad;
+#X obj 15 140 seq64x6v;
+#X obj 439 235 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 384 275 8 0 0 0 - - v3;
+#X obj 384 250 * 1023;
+#X obj 545 235 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 490 275 8 0 0 0 - - v4;
+#X obj 490 250 * 1023;
+#X obj 651 236 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 596 276 8 0 0 0 - - v5;
+#X obj 596 251 * 1023;
+#X obj 758 235 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 703 275 8 0 0 0 - - v7;
+#X obj 703 250 * 1023;
+#X obj 230 232 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 177 272 8 0 0 0 - - v1;
+#X obj 177 247 * 1023;
+#X obj 177 229 r pwmv1;
+#X obj 333 234 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 278 274 8 0 0 0 - - v2;
+#X obj 278 249 * 1023;
+#X obj 278 231 r pwmv2;
+#X obj 384 232 r pwmv3;
+#X obj 490 232 r pwmv4;
+#X obj 596 233 r pwmv5;
+#X obj 703 232 r pwmv7;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 17 0;
+#X connect 6 0 5 1;
+#X connect 7 0 5 1;
+#X connect 8 0 5 1;
+#X connect 9 0 5 1;
+#X connect 10 0 4 1;
+#X connect 11 0 5 0;
+#X connect 12 0 5 1;
+#X connect 13 0 5 0;
+#X connect 17 2 30 0;
+#X connect 17 3 34 0;
+#X connect 17 4 18 0;
+#X connect 17 5 21 0;
+#X connect 17 6 24 0;
+#X connect 17 7 27 0;
+#X connect 18 0 20 0;
+#X connect 20 0 19 0;
+#X connect 21 0 23 0;
+#X connect 23 0 22 0;
+#X connect 24 0 26 0;
+#X connect 26 0 25 0;
+#X connect 27 0 29 0;
+#X connect 29 0 28 0;
+#X connect 30 0 32 0;
+#X connect 32 0 31 0;
+#X connect 33 0 32 1;
+#X connect 34 0 36 0;
+#X connect 36 0 35 0;
+#X connect 37 0 36 1;
+#X connect 38 0 20 1;
+#X connect 39 0 23 1;
+#X connect 40 0 26 1;
+#X connect 41 0 29 1;

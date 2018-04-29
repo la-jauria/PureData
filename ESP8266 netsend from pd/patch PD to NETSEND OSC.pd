@@ -1,0 +1,18 @@
+#N canvas 53 85 1867 995 10;
+#X msg 50 233 disconnect;
+#X floatatom 229 298 0 0 0 0 - - -;
+#X obj 229 271 netsend -u;
+#X obj 227 215 list prepend send;
+#X obj 227 240 list trim;
+#X msg 29 171 connect 192.168.1.222 8266;
+#X msg 226 186 2 \$1;
+#X obj 228 81 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 259 102 0 to 1023;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;

@@ -1,4 +1,17 @@
-/* 
+/*---------------------------------------------------------------------------------------------
+
+    _     ____       _  ____  _     ____  _  ____
+   / \   /  _ \     / |/  _ \/ \ /\/  __\/ \/  _ \
+   | |   | / \|     | || / \|| | |||  \/|| || / \|
+   | |_/\| |-||  /\_| || |-||| \_/||    /| || |-||
+   \____/\_/ \|  \____/\_/ \|\____/\_/\_\\_/\_/ \|
+
+  ESP8266 NETSEND - NETRECEIVE from PD Vanilla (RASPBERRYPI)
+  Creado por la Jauria
+  REV Alex vargas Benanburg                                             *
+
+-------------------------------------------------------------------------------------------------
+  Open Sound Control (OSC) library for the ESP8266
  *  Receive UDP Packets from Pure Data with [netsend]
  *  
  *  Connect the ESP8266 to the "linksys" Wi-Fi router
@@ -15,7 +28,7 @@ const boolean DEBUG = false;
 char ssid[] = "EspacioTiempo";          // your network SSID (name)
 char pass[] = "244466666";           // your network password
 
-IPAddress ip(192, 168, 1, 200);  // Local IP   
+IPAddress ip(192, 168, 1, 222);  // Local IP   
 IPAddress gateway(192, 168, 1, 1); // Router IP
 IPAddress subnet(255, 255, 255, 0);
 //...

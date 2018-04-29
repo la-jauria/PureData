@@ -1,0 +1,95 @@
+#N canvas 61 81 1855 999 10;
+#X obj 822 613 packOSC;
+#X msg 620 577 disconnect;
+#X floatatom 868 650 5 0 0 0 - - -, f 5;
+#X obj 801 545 t b a b;
+#X msg 847 572 [;
+#X msg 801 572 ];
+#X obj 804 144 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 822 692 udpsend 8266;
+#X msg 811 238 /motor 14 \$1;
+#X obj 801 208 int;
+#X obj 517 152 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 512 106 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 514 209 int;
+#X obj 400 214 int;
+#X obj 285 108 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 172 215 int;
+#X obj 972 148 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 969 222 int;
+#X obj 1126 143 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 1282 143 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 1123 209 int;
+#X obj 1279 215 int;
+#X msg 514 233 /motor 4 \$1;
+#X msg 400 239 /motor 2 \$1;
+#X msg 172 238 /motor 5 \$1;
+#X msg 965 243 /motor 16 \$1;
+#X msg 1123 242 /motor 12 \$1;
+#X msg 1279 238 /motor 13 \$1;
+#X msg 246 610 connect 192.168.1.200 8266;
+#X msg 402 536 connect 192.168.1.201 8266;
+#X text 326 77 MOTOR 1;
+#X text 544 72 MOTOR 2;
+#X text 443 512 Light TESTER;
+#X text 223 587 CNTRL-Z / Controlador torre MUSEO;
+#X text 943 35 MOTOR DRIVER 2 - ESP output 16/14 - 12/13 ventiladores
+;
+#X text 340 30 MOTOR DRIVER 1 - ESP output 5/0 - 2/4 Goterotos;
+#X text 834 117 MOTOR 3;
+#X text 1165 115 MOTOR 4;
+#X text 999 120 MOTOR 5;
+#X obj 1446 402 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X msg 1440 492 /motor 0 \$1;
+#X obj 1443 468 int;
+#X obj 288 147 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 285 213 int;
+#X text 1308 115 MOTOR 7;
+#X text 1452 380 TEST PIN 0 led;
+#X msg 284 238 /motor 15 \$1;
+#X connect 0 0 7 0;
+#X connect 0 1 2 0;
+#X connect 1 0 7 0;
+#X connect 3 0 5 0;
+#X connect 3 1 0 0;
+#X connect 3 2 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 9 0;
+#X connect 8 0 3 0;
+#X connect 9 0 8 0;
+#X connect 10 0 12 0;
+#X connect 11 0 13 0;
+#X connect 12 0 22 0;
+#X connect 13 0 23 0;
+#X connect 14 0 15 0;
+#X connect 15 0 24 0;
+#X connect 16 0 17 0;
+#X connect 17 0 25 0;
+#X connect 18 0 20 0;
+#X connect 19 0 21 0;
+#X connect 20 0 26 0;
+#X connect 21 0 27 0;
+#X connect 22 0 3 0;
+#X connect 23 0 3 0;
+#X connect 24 0 3 0;
+#X connect 25 0 3 0;
+#X connect 26 0 3 0;
+#X connect 27 0 3 0;
+#X connect 28 0 7 0;
+#X connect 29 0 7 0;
+#X connect 39 0 41 0;
+#X connect 40 0 3 0;
+#X connect 41 0 40 0;
+#X connect 42 0 43 0;
+#X connect 43 0 46 0;
+#X connect 46 0 3 0;

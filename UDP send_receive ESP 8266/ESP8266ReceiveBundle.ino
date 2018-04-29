@@ -25,8 +25,8 @@
 #include <OSCBundle.h>
 #include <OSCData.h>
 
-char ssid[] = "linksys";          // your network SSID (name)
-char pass[] = "";                    // your network password
+char ssid[] = "NETWORKNAME";          // your network SSID (name)
+char pass[] = "NETWORKPASS";                    // your network password
 const IPAddress ip(192, 168, 1, 220);     // IP para este dispositivo
 const IPAddress gateway(192, 168, 1, 1);  // IP gateway, normalmente es la del router
 const IPAddress subnet(255, 255, 255, 0); // Mascara de subred
